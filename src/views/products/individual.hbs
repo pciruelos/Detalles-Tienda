@@ -1,0 +1,29 @@
+<!-- Page Content -->
+<div class="container jumbotron">
+
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4"> {{produ.Titulo}}
+    <small>Categoria: {{produ.Categoria}}</small>
+  </h1>
+
+  <!-- Portfolio Item Row -->
+  <div class="row">
+
+    <div class="col-md-8">
+      <img class="img-fluid" src="{{produ.image}}" alt="">
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="my-3">Descripcion:</h3>
+      <p>{{produ.DescripcionLarga}}</p>
+          <h3 class="my-3">{{produ.Precio}}</h3>
+    <h3 class="my-3">Detalles</h3>
+      <ul>
+        <li>{{produ.Detalles}}</li>
+      </ul>
+      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a> 
+    </div>
+  
+  </div>
+  <!-- /.row -->
+
