@@ -88,6 +88,7 @@ app.use((req, res, next) => {
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/products.routes'));
 app.use(require('./routes/users.routes'));
+app.use(require('./routes/contact'));
 
 app.get('/', (req,res) => {
   res.render('index');

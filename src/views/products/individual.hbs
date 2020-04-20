@@ -5,7 +5,7 @@
   <h1 class="my-4"> {{produ.Titulo}}
     <small>Categoria: {{produ.Categoria}}</small>
   </h1>
-
+ 
   <!-- Portfolio Item Row -->
   <div class="row">
 
@@ -20,8 +20,13 @@
     <h3 class="my-3">Detalles</h3>
       <ul>
         <li>{{produ.Detalles}}</li>
-      </ul>
-      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a> 
+      </ul>{{#if user}} 
+      <a href="/products/edit/{{_id}}" class="btn btn-primary btn-sm btn-block mb-2"><i class="fa fa-pencil">   </i> Editar</a>   
+                <form action="/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-block btn-sm"><i class="fa fa-trash-o">   </i>  Borrar</button>{{else}}
+      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>  {{/if}}
+      
     </div>
   
   </div>
