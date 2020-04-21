@@ -1,6 +1,8 @@
 <!-- Page Content -->
-<div class="container jumbotron">
-
+<div class="container">
+<div class="card">
+  <div class="card-body">
+  </body>
   <!-- Portfolio Item Heading -->
   <h1 class="my-4"> {{produ.Titulo}}
     <small>Categoria: {{produ.Categoria}}</small>
@@ -9,18 +11,19 @@
   <!-- Portfolio Item Row -->
   <div class="row">
 
-    <div class="col-md-8">
+    <div class="col-md-8 text-center">
       <img class="img-fluid" src="{{produ.image}}" alt="">
     </div>
 
     <div class="col-md-4">
       <h3 class="my-3">Descripcion:</h3>
       <p>{{produ.DescripcionLarga}}</p>
-          <h3 class="my-3">{{produ.Precio}}</h3>
-    <h3 class="my-3">Detalles</h3>
+          <h3 class="my-3">${{produ.Precio}}</h3>
+    <h3 class="my-3">Detalles:</h3>
       <ul>
         <li>{{produ.Detalles}}</li>
       </ul>{{#if user}} 
+      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>
       <a href="/products/edit/{{_id}}" class="btn btn-primary btn-sm btn-block mb-2"><i class="fa fa-pencil">   </i> Editar</a>   
                 <form action="/delete/{{_id}}?_method=DELETE" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
@@ -28,7 +31,7 @@
       <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>  {{/if}}
       
     </div>
-  
+  </div></div>
   </div>
   <!-- /.row -->
 

@@ -27,7 +27,7 @@ const ProductSchema = new Schema ({
     Categoria:{
             type: String,
             require:false,
-        enum: ['Juguetes','2','3','4','5','6'] },
+        enum: ['Juguetes','Juegos de Mesa','Disfrazes','Bebes y Dicaticos','Rodados','6'] },
 
     image:{
             type: String,

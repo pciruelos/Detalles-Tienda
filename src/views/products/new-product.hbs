@@ -1,4 +1,4 @@
-<div class="col-md-4 mx-auto">
+<div class="col-md-6 mx-auto">
     <div class="card text-center">
   
   <div class="card-header text-center">
@@ -11,7 +11,8 @@
 
 <div class="custom-file">
   <input type="file" class="custom-file-input" name="image" id="customFileLang" lang="es">
-  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo (700x400 o 1:
+    .75:1)</label>
 </div>
 
 </div>
@@ -25,7 +26,7 @@
         <textarea class="form-control" name="DescripcionLarga" type="text" placeholder="Descripcion Larga "></textarea>
         </div>
         <div class="form-grup p-2">  
-        <textarea class="form-control" name="Detalles" type="text" placeholder="Detalles "></textarea>
+        <textarea class="form-control" name="Detalles" type="text" placeholder="Detalles ej:incluye "></textarea>
         </div>
         <div class="form-grup p-2">  
         <textarea class="form-control" name="LinkDePago" type="text" placeholder="Link de Pago "></textarea>
@@ -34,16 +35,15 @@
         <select class="custom-select" name="Categoria" type="text" id="inputGroupSelect01">
     <option selected>Categoria</option>
     <option value="Juguetes">Juguetes</option>
-    <option value="2">Didacticos</option>
-    <option value="3">Juegos de Mesa</option>
-    <option value="4">Libros</option>
-    <option value="5">Peluches</option>
-    <option value="6">Puzzles</option>
+    <option value="Juegos de Mesa">Juegos de mesa</option>
+    <option value="Disfrazes">Disfrazes</option>
+    <option value="Bebes y Dicaticos">Bebes y Dicaticos</option>
+   <option value="Rodados">Rodados</option>
 
   </select>
         </div>
     <div class="form-grup p-2">  
-        <input class="form-control" name="Precio" type="text" placeholder="Precio"></input>
+        <input class="form-control" name="Precio" type="text" placeholder="Precio sin signo peso"></input>
         </div>
     <div class="form-grup p-2">               
             <button class="btn btn-success btn-block">Agregar</button>

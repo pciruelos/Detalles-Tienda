@@ -38,10 +38,25 @@ productsCtrl.render1 = async (req, res) => {
     res.render('products/individual', { produ });
 };
 
-productsCtrl.renderPuzzle = async (req, res) => {
-    const categoria4 = await producto.find({"Categoria": "4"});
-    console.log(categoria4);
-    res.render('products/puzzle', { categoria4 });
+productsCtrl.renderctg1 = async (req, res) => {
+    const ctg1 = await producto.find({"Categoria": "Juguetes"});
+    res.render('products/ctg1', { ctg1 });
+};
+productsCtrl.renderctg2 = async (req, res) => {
+    const ctg2 = await producto.find({"Categoria": "Juegos de Mesa"});
+    res.render('products/ctg2', { ctg2 });
+};
+productsCtrl.renderctg3 = async (req, res) => {
+    const ctg3 = await producto.find({"Categoria": "Disfrazes"});
+    res.render('products/ctg3', { ctg3 });
+};
+productsCtrl.renderctg4 = async (req, res) => {
+    const ctg4 = await producto.find({"Categoria": "Bebes y Dicaticos"});
+    res.render('products/ctg4', { ctg4 });
+};
+productsCtrl.renderctg5 = async (req, res) => {
+    const ctg5 = await producto.find({"Categoria": "Rodados"});
+    res.render('products/ctg5', { ctg5 });
 };
 
 productsCtrl.updateProducts = async (req, res) => {

@@ -1,8 +1,6 @@
 <div class="row">
-    {{#each productos}}
-    
-    <div class="col-md-3" style="padding-bottom:10px">
-        
+    {{#each ctg3}}
+    <div class="col-md-3">
         <div class="card animated fadeInDown">
             <img class="card-img-top img-responsive rounded ImgPro logo p-2" src="{{image}}" alt="..." > 
             <div class="card-body">
@@ -10,7 +8,7 @@
                     {{Titulo}} 
                 </h4>
                     <p>{{DescripcionCorta}}</p>
-                    <div class="text-muted"> <h5>{{Categoria}}</h5></div>
+                    <h5>{{Categoria}}</h5>
                     <h3>$ {{Precio}}</h3>
                 
                  {{#if ../user}}
@@ -37,9 +35,4 @@
     
     {{/each}}
 </div>
-
-
-
-
-
 
