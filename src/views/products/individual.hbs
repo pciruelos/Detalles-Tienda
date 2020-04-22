@@ -5,7 +5,7 @@
   </body>
   <!-- Portfolio Item Heading -->
   <h1 class="my-4"> {{produ.Titulo}}
-    <small>Categoria: {{produ.Categoria}}</small>
+    <small class="text-muted">Categoria: {{produ.Categoria}}</small>
   </h1>
  
   <!-- Portfolio Item Row -->
@@ -19,16 +19,23 @@
       <h3 class="my-3">Descripcion:</h3>
       <p>{{produ.DescripcionLarga}}</p>
           <h3 class="my-3">${{produ.Precio}}</h3>
-    <h3 class="my-3">Detalles:</h3>
+    <h6 class="my-3">Detalles:</h6>
       <ul>
         <li>{{produ.Detalles}}</li>
       </ul>{{#if user}} 
       <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>
-      <a href="/products/edit/{{_id}}" class="btn btn-primary btn-sm btn-block mb-2"><i class="fa fa-pencil">   </i> Editar</a>   
-                <form action="/delete/{{_id}}?_method=DELETE" method="POST">
+      <a href="/products/edit/{{produ._id}}" class="btn btn-primary btn-sm btn-block mb-2"><i class="fa fa-pencil">   </i> Editar</a>   
+                <form action="/delete/{{produ._id}}?_method=DELETE" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <button type="submit" class="btn btn-danger btn-block btn-sm"><i class="fa fa-trash-o">   </i>  Borrar</button>{{else}}
-      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>  {{/if}}
+      <a href="/allproducts" class="btn btn-primary btn-sm btn-block mb-2">Volver</a>
+      <div><a href="{{produ.LinkDePago}}" class="btn btn-primary btn-sm btn-block mb-2">Comprar</a></div>
+      
+<script type="text/javascript">
+(function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+</script>
+</div>
+        {{/if}}
       
     </div>
   </div></div>

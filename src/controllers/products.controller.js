@@ -60,8 +60,8 @@ productsCtrl.renderctg5 = async (req, res) => {
 };
 
 productsCtrl.updateProducts = async (req, res) => {
-    const { Titulo, Descripcion, Precio} = req.body;
-    await producto.findByIdAndUpdate(req.params.id, {Titulo, Descripcion, Precio});
+    const { Titulo, DescripcionCorta, DescripcionLarga, Detalles, Categoria, LinkDePago, Precio} = req.body;
+    await producto.findByIdAndUpdate(req.params.id, {Titulo, DescripcionCorta, DescripcionLarga, LinkDePago, Detalles, Categoria, Precio});
     console.log(req.body);
     req.flash('success_msg', 'Producto Editado correctamente');
     res.redirect('/allproducts');
