@@ -12,4 +12,8 @@ indexCtrl.renderProducts = (req,res) => {
     res.render('products')
 };
 
+indexCtrl.renderGracias = (req,res) => {
+    res.render('products/gracias')
+};
+
 module.exports = indexCtrl;

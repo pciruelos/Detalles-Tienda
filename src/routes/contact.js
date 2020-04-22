@@ -5,10 +5,10 @@ const nodemailer = require('nodemailer');
 
 router.post( '/sendemail' , (req, res) => {
     const { name, email, telefono, asunto, texto } = req.body;
-/*
-    contentHTML = `<h1>Info:</h1>
+
+    contentHTML = `<h1>Consulta:</h1>
     <ul>
-    <li>Usuario:${name}</li>
+    <li>Usuario:${name}</li> 
     <li>Email:${email}</li>
     <li>Telefono:${telefono}</li>
     <li>Asunto:${asunto}</li>
@@ -19,14 +19,14 @@ router.post( '/sendemail' , (req, res) => {
 
 
     const transporter = nodemailer.createTransport({
-        host: 'mail.privateemail.com',
-        port: 465,
-        auth:{ user:'hola@detallesjugueteria.com', pass:'juanwgez76'},
+        service:'gmail',
+        auth:{user:'holaciru@gmail.com', pass:'nuevaparaholaciru'},
         tls: {
             rejectUnauthorized: false
         }
-
     });
+
+   /*   
     
     const info = await transporter.sendMail({
         from:"'pablo' server <hola@detallesjugueteria.com>",
@@ -35,5 +35,22 @@ router.post( '/sendemail' , (req, res) => {
         Text:'hola'
     });*/
 
+    let mailOptions = {
+        from: 'holaciru@gmail.com',
+        to: 'detalles.variedades@gmail.com',
+        subject:'Consulta desde la Web',
+        html: contentHTML,
+    };
+
+    transporter.sendMail(mailOptions, function(err, data){
+        if (err){
+            console.log('error bicht');
+        }else{
+            res.redirect('products/gracias');
+        }
+        
+    });
 });
-module.exports=router;
+
+
+module.exports = router;
