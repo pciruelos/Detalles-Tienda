@@ -46,7 +46,7 @@ router.post( '/sendemail' , (req, res) => {
         if (err){
             console.log('error bicht');
         }else{
-            res.redirect('products/gracias');
+            res.redirect('/products/gracias');
         }
         
     });

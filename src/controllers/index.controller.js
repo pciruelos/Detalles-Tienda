@@ -1,19 +1,19 @@
 const indexCtrl ={};
 
 indexCtrl.renderIndex = (req,res) => {
-    res.render('index')
+    res.render('index');
 };
 
 indexCtrl.renderContact = (req,res) => {
-    res.render('contact')
+    res.render('contact');
 };
 
 indexCtrl.renderProducts = (req,res) => {
-    res.render('products')
+    res.render('products');
 };
 
 indexCtrl.renderGracias = (req,res) => {
-    res.render('products/gracias')
+    res.render('products/gracias');
 };
 
 module.exports = indexCtrl;
