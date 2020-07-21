@@ -17,8 +17,9 @@ const app = express();
 require('./config/passport');
 
 //static files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname + '/public/uploads')));
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname+ '/public/uploads')));
+app.use('/static', express.static(path.join(__dirname, '/public')));
 //app.use(express.static('public'));
 //app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/public/uploads/', express.static(__dirname + '/public'));
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname + '/public/uploads')));
 
 console.log(__dirname);
 console.log(path.join(__dirname, 'public'));
+
 
 //settings
 

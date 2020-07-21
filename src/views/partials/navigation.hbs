@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="#">
+    {{!-- d-xs-block d-sm-block d-lg-none --}}
        {{!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">--}}
        Detalles Tienda Virtual</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,17 +31,19 @@
         </div>
       </li>
     </ul>
-    
+    {{!-- <a class="navbar-brand d-none d-lg-block m-auto" href="#"> --}}
+       {{!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">--}}
+       {{!-- Detalles Tienda Virtual</a> --}}
     <ul class="navbar-nav ml-auto">
       <!--  <form class="form-inline my-2 my-lg-0 pr-3">
      <input class="form-control mr-sm-2" type="search" placeholder="..." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>-->
     </form>
     <li class="nav-item">
-      <a href="https://www.facebook.com/DetallesAlmacenDeJuguetes " class="nav-link" > <i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+      <a href="https://www.facebook.com/DetallesAlmacenDeJuguetes " class="nav-link" > <i class="fa fa-facebook-square" aria-hidden="true"></i>  Detalles Almacen De Juguetes</a>
     </li>
     <li class="nav-item">
-      <a href="https://www.instagram.com/detalles.jugueteria/" class="nav-link"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+      <a href="https://www.instagram.com/detalles.jugueteria/" class="nav-link"><i class="fa fa-instagram" aria-hidden="true"></i>  @detalles.jugueteria</a>
     </li>
     {{#if user}} 
     <li class="nav-item">
@@ -51,7 +54,7 @@
         </li>
         
     {{else}}
-        <li class="nav-item"><a class="nav-link">-</a>
+        {{!-- <li class="nav-item"><a class="nav-link">-</a> --}}
          <!--    <a href="/users/inicio" class="nav-link">Ingresar</a>
         </li>
         <li class="nav-item">
