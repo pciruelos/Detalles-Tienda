@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+
 .violet{
     background: #593196;
     color:#FFFFFF;
@@ -10,7 +15,7 @@
     max-height: 150px ;
 }
 .logocompleto {
-  max-width: 600px;
+  /* max-width: 600px; */
   padding-top: 15px;
   
 }
@@ -30,17 +35,42 @@
 .whitefont1 {
   color: #FFFFFF;
   text-shadow: 0.1rem 0.1rem 0.5rem black;
-  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+
 } 
+
+.font4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #fff;
+  background-color:#22cfe3;
+  border-color: #22cfe3;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+
+}
+
+.font4:hover {
+  
+background-color: #ff6dcd;
+border-color: #ff6dcd;
+}
+
+
 .whitefont2 {
   color: #FFFFFF;
   text-shadow: 0.1rem 0.1rem 0.5rem black;
   font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+
 } 
 .whitefont3 {
   color: #FFFFFF;
   text-shadow: 0.1rem 0.1rem 0.5rem black;
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+
+
 } 
 .hrwhite{
   border-width: 0.2rem;
@@ -56,10 +86,15 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+
   }
   
 
   body:before {
+    font-family: 'Roboto', sans-serif !important;
+
     content: "";
     display: block;
     position: fixed;
@@ -83,6 +118,17 @@ body {
 
 .pink {
     color: pink;
+    border-top-color: pink     ;
+}
+
+.azulcito{
+  color: #22cfe3;
+  border-top-color: #22cfe3;
+
+}
+.verdecito{
+  color: #23cd16;
+  border-top-color: #23cd16;
 }
 .row.display-flex {
   display: flex;
